@@ -4,7 +4,7 @@ Official Website of TechnoWave 2018
 
 ## How to set up locally
 
-You mast have installed python and git installed in your system beforehand.
+You must have installed python and git in your system beforehand.
 
 ```
 git clone https://github.com/TechnoWave-GHRCEM/Technowave-Website.git
