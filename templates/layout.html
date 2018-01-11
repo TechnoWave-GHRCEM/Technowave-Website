@@ -1,22 +1,25 @@
 <!DOCTYPE html>
+<html lang="en" >
 
-<html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-	<title>TechnoWave 2k18 | {% block title %}{% endblock %}</title>
-
-	<!-- Site Icon -->
-	<link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
-
-  	<!-- Custom CSS -->
-  	<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
-
-	{% block extras %}{% endblock %}
+  <meta charset="UTF-8">
+  <title>TechnoWave | {% block title %}{% endblock %}</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='{{ url_for('static', filename='css/demo.css') }}'>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-	{% block main %}{% endblock %}
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title">TechnoWave <span class="thin">2k18</span></h1><br>
+        <button><h2>Coming Soon</h2></button>
+        {% block main %}{% endblock %}
+    </div>
+    <script src='{{ url_for('static', filename='js/EasePack.min.js') }}'></script>
+    <script src='{{ url_for('static', filename='js/rAF.js') }}'></script>
+    <script src='{{ url_for('static', filename='js/TweenLite.min.js') }}'></script>
+    <script src='{{ url_for('static', filename='js/index.js') }}'></script>
 </body>
+
 </html>
